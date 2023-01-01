@@ -213,4 +213,4 @@ plotB <- with(AveragebyIntervalWE, plot(AveragebyIntervalWE$Interval, AveragebyI
 ```
 ![](figure/plot4.png) \
 
-####Average amount of steps increases on weekends
+#### Average amount of steps increases on weekends
