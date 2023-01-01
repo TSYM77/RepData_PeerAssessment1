@@ -94,6 +94,10 @@ AveragebyInterval[which.max(AveragebyInterval$Average_Steps),]
 ```{r}
 nrow(activity_data) - nrow(activity_data2)
 ```
+
+* 2304 records with NA values
+
+
 #### Create data frame of records with NA value for steps
 
 ```{r}
