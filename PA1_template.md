@@ -211,4 +211,6 @@ plotA <- with(AveragebyIntervalWD, plot(AveragebyIntervalWD$Interval, AveragebyI
 plotB <- with(AveragebyIntervalWE, plot(AveragebyIntervalWE$Interval, AveragebyIntervalWE$Avg_Steps, main = "Avg Steps: Weekends", type="l", 
                                         xlab="Interval", ylab="Steps", ylim=c(0,200)))
 ```
-![](figure/plot4.png) 
+![](figure/plot4.png) \
+
+####Average amount of steps increases on weekends
