@@ -51,11 +51,14 @@ StepPerDay <- aggregate(activity_data['steps'], by=activity_data['date'], sum, n
 ```{r mean}
 mean(StepPerDay$steps, na.rm = TRUE)
 ```
+####9354.23
 
 #### Get median for above created dataframe
 ```{r median}
 median(StepPerDay$steps, na.rm = TRUE)
 ```
+####10395
+
 #### Plot histogram for data frame Steps Per Day
 ```{r}
 ggplot(StepPerDay, aes(x=steps)) + geom_histogram(bins=61, color="white", fill="blue", alpha=0.5)+
@@ -86,8 +89,12 @@ ggplot(AveragebyInterval) + geom_line(mapping = aes(x = Interval, y = Average_St
 AveragebyInterval[which.max(AveragebyInterval$Average_Steps),]
 ```
 
+####2304 records with NA values
 
 ## Imputing missing values
+
+#### to add misisng vlaues I created a sepperate dataframe with all missing values then inserted
+#### avg for each interval them merged with dataframe containing records with values
 
 #### Get number of records with NA value for steps values
 
@@ -145,10 +152,16 @@ StepPerDay2 <- aggregate(activity_data3['steps'], by=activity_data3['date'], sum
 mean(StepPerDay2$steps)
 ```
 
+####10766.19
+
+
 #### Get median for above created dataframe
 ```{r}
 median(StepPerDay2$steps)
 ```
+
+####10766.19
+
 
 #### Mean and median are higher than mean/median when remoiving NA values.
 
@@ -198,4 +211,6 @@ plotA <- with(AveragebyIntervalWD, plot(AveragebyIntervalWD$Interval, AveragebyI
 plotB <- with(AveragebyIntervalWE, plot(AveragebyIntervalWE$Interval, AveragebyIntervalWE$Avg_Steps, main = "Avg Steps: Weekends", type="l", 
                                         xlab="Interval", ylab="Steps", ylim=c(0,200)))
 ```
+
+####Average stepes increases on Weekends
 
